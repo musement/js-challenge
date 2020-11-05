@@ -1,0 +1,404 @@
+/* ==========================================================================
+   Fonts
+   ========================================================================== */
+
+@font-face{
+    font-family: 'Lato-Bold';
+    src: url('./font/Lato-Bold.ttf') format('ttf');
+}
+
+@font-face{
+    font-family: 'Lato-BoldItalic';
+    src: url('./font/Lato-BoldItalic.ttf') format('ttf');
+}
+
+@font-face{
+    font-family: 'Lato-Italic';
+    src: url('./font/Lato-Italic.ttf') format('ttf');
+}
+
+@font-face{
+    font-family: 'Lato-Regular';
+    src: url('./font/Lato-Regular.ttf') format('ttf');
+}
+
+/* ==========================================================================
+   Main Styles
+   ========================================================================== */
+html {
+    height: 100%;
+}
+
+body {
+    min-height: 100%;
+    margin: 0;
+    
+    display: flex;
+    flex-direction: column;
+    flex: 1 0 auto;
+    
+    font-family: 'Lato-Regular', sans-serif;
+    font-size: 13px;
+    text-rendering: optimizeLegibility;
+
+    -moz-osx-font-smoothing: grayscale;  /* Font smoothing tweaks for MacOSx in Gecko */
+    -webkit-font-smoothing: antialiased;
+    
+    color: #444A59;
+    background-color: #f8f8f8;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+h1, p, figure {
+    margin: 0;
+    font-weight: normal;
+}
+
+a,
+a:hover,
+a:visited{
+    text-decoration: none;
+    color: #444A59;
+}
+
+ul, li {
+    margin: 0;
+    padding: 0;
+    list-style-type: none; 
+}
+
+button {
+    appearance: none;
+    border: 0;
+}
+
+header,
+footer {
+    height: 60px;
+    
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    
+    text-transform: uppercase;
+    background-color: #ffffff;
+}
+
+main {
+    display: flex;
+    flex-direction: row;
+    flex: 1 0 auto;
+    margin: 30px 0 20px;
+}
+
+.container {
+    width: 100%;
+    max-width: 1240px;
+    padding: 0 40px;
+    margin: 0 auto;
+}
+
+/* ==========================================================================
+   Buttons
+   ========================================================================== */
+
+.icon {
+    width: 20px;
+    height: 20px;
+    fill: #d9d9d9;
+    transition: .3s fill;
+}
+
+.button {
+    border: 1px solid #d9d9d9;
+    border-radius: 100px;
+    background-color: #ffffff;
+    
+    cursor: pointer;
+    transition: .3s border, .3s color, .3s background-color;
+}
+
+.button--round {
+    display: block;
+    border-radius: 50%;
+}
+
+.button--primary {
+    padding: 13px;
+
+    font-family: 'Lato-Bold', sans-serif;
+    font-size: 13px;
+    text-transform: uppercase;
+    letter-spacing: 1.39px;
+}
+
+.button--primary:hover {
+    border: 1px solid #444A59;
+    color: #ffffff;
+    background-color: #444A59;
+}
+
+.button--wishlist:hover {
+    border: 1px solid #444A59;
+}
+
+.button--wishlist:hover > .icon {
+    fill: #444A59;
+}
+
+.button--in-cart {
+    pointer-events: none;
+    background-color: #d9d9d9;
+}
+
+/* ==========================================================================
+   Header
+   ========================================================================== */
+
+.header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.page-title {
+    font-size: 20px;
+}
+
+/* ==========================================================================
+   Bag
+   ========================================================================== */
+
+.header-bag {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-end;
+}
+
+.header-bag__item {
+    height: 25px;
+
+    display: flex;
+    align-items: flex-end;
+}
+
+.header-bag__item .icon {
+    height: auto;
+    fill: #444A59;
+}
+
+.header-bag__price {
+    margin-right: 5px;
+    font-size: 12px;
+    line-height: 12px;
+}
+
+.header-bag__count {
+    margin-left: 10px;
+}
+
+.header-bag__count .icon {
+    width: 17px;
+}
+
+.header-bag__wishlist-count {
+    margin-left: 10px;
+}
+
+.bag__item-counter {
+    width: 13px;
+    height: 13px;
+    margin-left: -1px;
+
+    display: flex;
+    align-self: flex-start;
+    justify-content: center;
+    align-items: center;
+
+    font-family: 'Lato-Bold', sans-serif;
+    font-size: 8px;
+    text-align: center;
+
+    border-radius: 50%;
+    color: #ffffff;
+    background-color: #358ED7;
+}
+
+/* ==========================================================================
+   Product List
+   ========================================================================== */
+
+.product-list {
+    display: flex;
+    flex: 0 1 auto;
+    flex-flow: row wrap;
+    margin: 0 -10px;
+}
+
+.product-list__item {
+    padding: 10px;
+    flex: 1 0 33.3333%;
+    max-width: 33.3333%;
+}
+
+/* ==========================================================================
+   Product
+   ========================================================================== */
+
+.product {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+
+    background-color: #ffffff;
+}
+
+/* ==========================================================================
+   Product Image
+   ========================================================================== */
+
+.product__image-wrapper {
+    padding: 20px;
+    position: relative;
+    text-align: center;
+}
+
+.product__image {
+    max-width: 100%;
+    height: auto;
+}
+
+/* ==========================================================================
+   Product Details
+   ========================================================================== */
+
+.product__details {
+    display: flex;
+    flex: 1 0 auto;
+    flex-direction: column;
+    padding: 10px 20px 20px;
+    text-align: center;
+}
+
+/* ==========================================================================
+   Product Titles
+   ========================================================================== */
+
+.product__title {
+    padding-bottom: 10px; 
+    
+    font-family: 'Lato-Bold', sans-serif;
+    font-size: 14px;
+    letter-spacing: 1.37px;
+    text-transform: uppercase;
+}
+
+.product__subtitle {
+    padding-bottom: 10px; 
+
+    font-size: 12px;
+    line-height: 19px;
+    letter-spacing: 0.43px;
+
+    color: #808080;
+}
+
+/* ==========================================================================
+   Product Prices
+   ========================================================================== */
+
+.product__price {
+    padding-bottom: 20px;
+    
+    font-family: 'Lato-Bold', sans-serif;
+    font-size: 14px;
+    letter-spacing: 2.33px;
+}
+
+.product__price--strike {
+    margin-right: 10px;
+    text-decoration: line-through;
+}
+
+.product__price--discounted {
+    color: #F54B5E;
+}
+
+/* ==========================================================================
+   Product actions
+   ========================================================================== */
+
+.product__wishlist-button {
+    width: 35px;
+    height: 35px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    position: absolute;
+    top: 10px;
+    right: 10px;
+}
+
+.product__add-to-cart {
+    width: 100%;
+    margin-top: 10px;
+    margin-top: auto;
+}
+
+/* ==========================================================================
+   Pagination
+   ========================================================================== */
+
+.pagination {
+    height: 45px;
+    margin: 30px auto;
+    text-align: center;
+}
+
+.pagination__list {
+    height: 100%;
+    display: inline-flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.pagination__item {
+    height: 100%;
+    width: 45px;
+    font-family: 'Lato-Bold', sans-serif;
+    font-size: 13px;
+    letter-spacing: 1.39px;
+    text-align: center;
+}
+
+.pagination__link {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #444A59;
+}
+
+.pagination__link:hover {
+    text-decoration: underline;
+}
+
+.pagination__link .icon {
+    width: 8px;
+    fill: #444A59;
+}
+
+/* ==========================================================================
+   Footer
+   ========================================================================== */
+
+.footer__sidenote {
+    font-family: 'Lato-Bold', sans-serif;
+    letter-spacing: 1.37px;
+}
