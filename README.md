@@ -91,7 +91,7 @@ Create a **private Git repository** with the following format:
 	js_challenge_<first-name>-<last-name> 
 
 [Github](https://github.com) allows private repositories for free, you only need to grant us access to it afterwards.
-Please, use these accounts: [dotBits](https://github.com/dotBits), [przemkow](https://github.com/przemkow), [zi](https://github.com/zi), [gionatan-lombardi](https://github.com/gionatan-lombardi).
+Please, use these accounts: [dotBits](https://github.com/dotBits), [przemkow](https://github.com/przemkow), [zi](https://github.com/zi), [gionatan-lombardi](https://github.com/gionatan-lombardi), [aureliome](https://github.com/aureliome).
 
 Commit your work as you progress, we look at the commit history as well
 
