@@ -63,7 +63,7 @@ You can't link to external resources, if necessary include them in your solution
   * description => product description
   * retail_price => the product price
 ```
-Please refer to [this page](https://api-docs.musement.com/reference#get_activities) for documentation.
+Please refer to [this page](https://api-docs.musement.com/reference#search) for documentation.
 
 
 ## Extra credit 
